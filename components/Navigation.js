@@ -2,21 +2,21 @@ import styles from "../styles/Navigation.module.scss"
 import Image from "next/image"
 
 const Navigation = ({ locale, locales }) => {
-  const resolveMovies = {
-    en: 'Movies',
-    nl: 'Films',
+  const groups = {
+    en: 'Groups',
+    nl: 'Groepen',
   }
-  const resolvePeople = {
-    en: 'People',
-    nl: 'Mensen',
+  const members = {
+    en: 'Members',
+    nl: 'Leden',
   }
-  const resolveNews = {
-    en: 'News',
-    nl: 'Nieuws',
+  const albums = {
+    en: 'Albums',
+    nl: 'Albums',
   }
-  const resolveMerchandise = {
-    en: 'Shop',
-    nl: 'Winkel',
+  const history = {
+    en: 'History',
+    nl: 'Geschiedenis',
   }
   let homeurl = "/";
   if (locale != 'default') {
@@ -35,29 +35,26 @@ const Navigation = ({ locale, locales }) => {
               alt="IMDBPlus Logo"
               className=""
             /> */}
-            <Image src="/logo-colored-full.png" alt="IMDBPlus Logo" width="128" height="25" />
+            <Image src="/logo-colored-full.png" alt="FansForBands Logo" width="150" height="64" />
           </a>
         </div>
         <div className={styles.navlinkswrapper}>
           <div className={styles.navlinks}>
             <div className={styles.navlink}>
-              <a href={`${defaultLocale}pages/movies`} className={styles.movie}>{resolveMovies[locale]}</a>
+              <a href={`${defaultLocale}pages/groups`} className={styles.navigationlink}>{groups[locale]}</a>
             </div>
             <div className={styles.navlink}>
-              <a href={`${defaultLocale}pages/people`} className={styles.personality}>{resolvePeople[locale]}</a>
+              <a href={`${defaultLocale}pages/members`} className={styles.navigationlink}>{members[locale]}</a>
             </div>
             <div className={styles.navlink}>
-              <a href={`${defaultLocale}pages/news`} className={styles.newsitem}>{resolveNews[locale]}</a>
-            </div>
-            <div className={styles.navlink}>
-              <a href={`${defaultLocale}pages/shop`} className={styles.product}>{resolveMerchandise[locale]}</a>
+              <a href={`${defaultLocale}pages/history`} className={styles.navigationlink}>{history[locale]}</a>
             </div>
           </div>
           <div className={styles.navlocales}>
             {
               locales.map(loc => {
                 return (<div className={styles.navlocale} key={loc}>
-                  <a href={`/${loc}`} className={`${locale === loc ? "selected" : ""}`}>{loc}</a>
+                  <a href={`/${loc}`} className={styles.navigationlink}>{loc}</a>
                 </div>)
               })
             }

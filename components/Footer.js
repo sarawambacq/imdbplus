@@ -6,13 +6,13 @@ const Footer = () => {
       <div className={styles.footer}>
 
         <div className="">
-          <img
-            src="https://a.storyblok.com/f/133261/3039x582/a60d166ec2/logo-colored-full.png/m/200x0"
-            alt="IMDBPlus Logo"
-            className=""
-          />
+        <img
+          src="/logo-colored-full.png"
+          alt="FansForBands Logo"
+          style={{ width: '150px', height:'64px' }}
+        />
         </div>
-        <p>IMDB Plus is every bit as good as IMDB. Plus!</p>
+        <p>Welcome to FansForBands!</p>
       </div>
     </footer>
 

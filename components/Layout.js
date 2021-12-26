@@ -10,16 +10,15 @@ const Layout = ({ children, locale, locales, data }) => {
 
   const router = useRouter();
 
-  let title = "IMDBPlus";
-  let description = "description for page";
-  let sitename="IMDB Plus";
+  let title = "FansForBands";
+  let description = "FansForBands";
+  let sitename="FansForBands";
   let url = router.basePath;
-  const hostname="https://imdbplus.vercel.app/"
+  const hostname="https://fansforbands.vercel.app/"
   if (typeof window !== 'undefined') {
     const hostname = window.location.hostname;
- }
+  }
   let image=hostname+"assets/logo-colored-full.png";
-
 
   if (data && data.story) {
     if (data.story.content) {
@@ -31,7 +30,7 @@ const Layout = ({ children, locale, locales, data }) => {
       if (data.story.content.short) {
         description = data.story.content.short;
       } else if (data.story.content.introduction){
-          description = data.story.content.introduction;
+          description = data.story.content.intro;
       }
       if(data.story.content.mainpicture){
         image=data.story.content.mainpicture.filename;

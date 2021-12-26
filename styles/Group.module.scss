@@ -1,6 +1,6 @@
 @import '../styles/colors';
 
-.movie {
+.group {
   .mainpicture {
     width: 100%;
     height: 500px;
@@ -12,6 +12,10 @@
 
   .short {
     font-weight: 800;
+
+    .shorttitle {
+      color: $color-primary;
+    }
   }
 
   .genrelist {
@@ -26,53 +30,26 @@
       font-weight: 700;
     }
   }
+  .navlink {
+    margin-top: 20px;
 
-  .peoplesegment {
-    margin-top:40px;
-    .title {
+    a {
+      text-decoration: none;
+      padding: 5px 10px;
+      border: 5px solid transparent;
 
-      font-size: 1.4em;
-      font-weight: 800;
-      margin-bottom: 20px;
+      &:hover {
+        border: 5px solid black;
+      }
 
+      &.navigationlink {
+        border: 2px solid $color-primary;
+      }
+
+      &.navigationlink:hover {
+        border: 5px solid $color-primary;
+      }
     }
-
-    .content {}
   }
 
-  .title {}
-
-  .summary {}
-
-  .synopsis {}
-
-  .introduction {}
-
-  .main_poster {
-    img {}
-  }
-
-  .writers {
-    .writer {}
-  }
-
-  .directors {
-    .director {}
-  }
-
-  .stars {
-    .star {}
-  }
-
-  .genres {
-    .genre {}
-  }
-
-  .pictures {
-    .picture {}
-  }
-
-  .trailers {
-    .trailer {}
-  }
 }

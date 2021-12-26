@@ -7,7 +7,7 @@ import PostsList from './PostsList'
 import Page from './Page'
 import BlogPost from './BlogPost'
 import Text from './Text'
-import Movie from './Movie'
+import Group from './Group'
 import Personality from './Personality'
 import Studio from './Studio'
 import Genre from './Genre'
@@ -15,7 +15,7 @@ import Country from './Country'
 import NewsItem from './NewsItem'
 import FrontpageSlideshow from './FrontpageSlideshow'
 import Intro from './Intro'
-import MovieList from './MovieList'
+import GroupList from './Grouplist'
 import NewsItemList from './NewsItemList'
 import PersonalityList from './PersonalityList'
 import ProductList from './ProductList'
@@ -24,6 +24,12 @@ import EmailOptin from './EmailOptin'
 import TwoCol from './TwoCol'
 import Title from './Title'
 import TopMovies from './TopMovies'
+import AgeRating from './AgeRating'
+import MemberList from './MemberList'
+import GroupMemberList from './GroupMemberList'
+import Member from './Member'
+import GroupHistoryList from './GroupHistoryList'
+import History from './History'
 
 const Components = {
   'teaser': Teaser,
@@ -34,7 +40,11 @@ const Components = {
   'post': BlogPost,
   'text': Text,
   'selected-posts': PostsList,
-  'movie': Movie,
+  'group': Group,
+  'memberlist': MemberList,
+  'member': Member,
+  'groupmemberlist': GroupMemberList,
+  'grouphistorylist': GroupHistoryList,
   'personality': Personality,
   'studio': Studio,
   'genre' : Genre,
@@ -42,7 +52,7 @@ const Components = {
   'newsitem': NewsItem,
   'frontpageslideshow':FrontpageSlideshow,
   'intro':Intro,
-  'movielist':MovieList,
+  'grouplist':GroupList,
   'newsitemlist':NewsItemList,
   'productlist':ProductList,
   'productcategory':Placeholder,
@@ -51,13 +61,16 @@ const Components = {
   'emailoptin':EmailOptin,
   'twocol':TwoCol,
   'title':Title,
-  'topmovies':TopMovies
+  'topmovies':TopMovies,
+  'agerating': AgeRating,
+  'historyitem': History
 }
 
 
 const DynamicComponent = ({ data, locale }) => {
   let componentType='undefined';
   let level = 'undefined';
+  console.log(data, locale);
   if(data&&data.story&&data.story.content){
     componentType = data.story.content.component;
     level='data';

@@ -1,0 +1,55 @@
+@import '../styles/colors';
+
+.group {
+  .mainpicture {
+    height: 500px;
+    width: 400px;
+    background-size: contain;
+    background-position: left;
+    box-shadow: inset 0 0 0px 10px #000;
+    margin-bottom: 40px;
+  }
+
+  .short {
+    font-weight: 800;
+
+    .shorttitle {
+      color: $color-primary;
+    }
+  }
+
+  .genrelist {
+    display: flex;
+    margin-bottom: 40px;
+
+    .genre {
+      padding: 5px 20px;
+      background-color: #f0f0f0;
+      max-width: 100px;
+      margin-right: 10px;
+      font-weight: 700;
+    }
+  }
+  .navlink {
+    margin-top: 20px;
+
+    a {
+      text-decoration: none;
+      padding: 5px 10px;
+      border: 5px solid transparent;
+
+      &:hover {
+        border: 5px solid black;
+      }
+
+      &.navigationlink {
+        border: 2px solid $color-primary;
+      }
+
+      &.navigationlink:hover {
+        border: 5px solid $color-primary;
+      }
+    }
+  }
+
+}

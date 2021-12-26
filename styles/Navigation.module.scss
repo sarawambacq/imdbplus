@@ -42,20 +42,10 @@
             border: 5px solid black;
           }
 
-          &.movie:hover {
+          &.navigationlink:hover {
             border: 5px solid $color-primary;
           }
-          &.personality:hover {
-            border: 5px solid $color-primary-personality;
-          }
-          &.newsitem:hover {
-            border: 5px solid $color-primary-newsitem;
-          }
-          &.product:hover {
-            border: 5px solid $color-primary-product;
-          }
         }
-
       }
     }
   }
@@ -73,7 +63,7 @@
         border: 5px solid transparent;
 
         &:hover {
-          border: 5px solid black;
+          border: 5px solid $color-primary;
         }
       }
     }

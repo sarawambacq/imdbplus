@@ -3,21 +3,21 @@ import React, { useState } from "react"
 
 const NavigationMobile = ({ locale, locales }) => {
 
-  const resolveMovies = {
-    en: 'Movies',
-    nl: 'Films',
+  const groups = {
+    en: 'Groups',
+    nl: 'Groepen',
   }
-  const resolvePeople = {
-    en: 'People',
-    nl: 'Mensen',
+  const members = {
+    en: 'Members',
+    nl: 'Leden',
   }
-  const resolveNews = {
-    en: 'News',
-    nl: 'Nieuws',
+  const albums = {
+    en: 'Albums',
+    nl: 'Albums',
   }
-  const resolveMerchandise = {
-    en: 'Shop',
-    nl: 'Winkel',
+  const history = {
+    en: 'History',
+    nl: 'Geschiedenis',
   }
   function togglenav() {
     setNavstate(result.data.stories);
@@ -34,26 +34,23 @@ const NavigationMobile = ({ locale, locales }) => {
         <div className={styles.navlogo}>
           <a href="/">
             <img
-              src="https://a.storyblok.com/f/133261/3039x582/a60d166ec2/logo-colored-full.png/m/200x0"
+              src="/logo-colored-full.png"
               alt="IMDBPlus Logo"
-              className=""
+              style={{ width: '150px', height:'64px' }}
             />
           </a>
         </div>
         <div className={styles.hamburger} onClick={() => setNavstate(!navstate)}><div className={styles.line}></div><div className={styles.line}></div><div className={styles.line}></div></div>
         {navstate&&<div className={styles.navlinkswrapper}>
           <div className={styles.navlinks}>
-            <div className={styles.navlink}>
-              <a href={`${defaultLocale}pages/movies`} className={styles.movie}>{resolveMovies[locale]}</a>
+          <div className={styles.navlink}>
+              <a href={`${defaultLocale}pages/groups`} className={styles.navigationlink}>{groups[locale]}</a>
             </div>
             <div className={styles.navlink}>
-              <a href={`${defaultLocale}pages/people`} className={styles.personality}>{resolvePeople[locale]}</a>
+              <a href={`${defaultLocale}pages/members`} className={styles.navigationlink}>{members[locale]}</a>
             </div>
             <div className={styles.navlink}>
-              <a href={`${defaultLocale}pages/news`} className={styles.newsitem}>{resolveNews[locale]}</a>
-            </div>
-            <div className={styles.navlink}>
-              <a href={`${defaultLocale}pages/shop`} className={styles.product}>{resolveMerchandise[locale]}</a>
+              <a href={`${defaultLocale}pages/history`} className={styles.navigationlink}>{history[locale]}</a>
             </div>
           </div>
           <div className={styles.navlocales}>
