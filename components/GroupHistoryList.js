@@ -12,13 +12,11 @@ const GroupList = ({ data, level, locale }) => {
     var content = data;
   }
   const [sortby, setSortby] = useState();
-  
-  const defaultLocale = locale === 'en' ? '' : 'nl/'
 
   const [items, setItems] = useState([]);
   getAllItems('group', locale, sortby).then(
     function (result) {
-      setItems(result.data.stories.map(item => ({...item, full_slug: `${defaultLocale}history/history-${item.content.title.replace(' ', '-').toLowerCase()}`})));
+      setItems(result.data.stories.map(item => ({...item, full_slug: `history/history-${item.content.title.replace(' ', '-').toLowerCase()}`})));
     }
   );
 

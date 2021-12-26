@@ -12,13 +12,11 @@ const GroupMemberList = ({ data, level, locale }) => {
     var content = data;
   }
   const [sortby, setSortby] = useState();
-  
-  const defaultLocale = locale === 'default' ? '' : 'nl/'
 
   const [items, setItems] = useState([]);
   getAllItems('member', locale, sortby).then(
     function (result) {
-      setItems(result.data.stories.filter(item => item.full_slug.includes(data.story.name)).map(item => ({...item, full_slug: defaultLocale + item.full_slug})));
+      setItems(result.data.stories.filter(item => item.full_slug.includes(data.story.name)).map(item => ({...item, full_slug: item.full_slug})));
     }
   );
 
