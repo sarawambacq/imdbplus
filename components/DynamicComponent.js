@@ -70,7 +70,6 @@ const Components = {
 const DynamicComponent = ({ data, locale }) => {
   let componentType='undefined';
   let level = 'undefined';
-  console.log(data, locale);
   if(data&&data.story&&data.story.content){
     componentType = data.story.content.component;
     level='data';
