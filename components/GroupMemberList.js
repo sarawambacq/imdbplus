@@ -13,7 +13,7 @@ const GroupMemberList = ({ data, level, locale }) => {
   }
   const [sortby, setSortby] = useState();
   
-  const defaultLocale = locale === 'en' ? '' : 'nl/'
+  const defaultLocale = locale === 'default' ? '' : 'nl/'
 
   const [items, setItems] = useState([]);
   getAllItems('member', locale, sortby).then(
