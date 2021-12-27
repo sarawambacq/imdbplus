@@ -3,6 +3,7 @@ import NextHead from 'next/head'
 
 const Head = ({ title, description, ogtitle, ogdescription, ogimage, ogurl, ogsite_name }) => (
   <NextHead>
+    
     <meta charSet="UTF-8" />
     <title>{title || ''}</title>
     <meta name="description" content={description || ''} />
