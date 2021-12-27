@@ -11,7 +11,6 @@ import Group from './Group'
 import Personality from './Personality'
 import Studio from './Studio'
 import Genre from './Genre'
-import Country from './Country'
 import NewsItem from './NewsItem'
 import FrontpageSlideshow from './FrontpageSlideshow'
 import Intro from './Intro'
@@ -24,7 +23,6 @@ import EmailOptin from './EmailOptin'
 import TwoCol from './TwoCol'
 import Title from './Title'
 import TopMovies from './TopMovies'
-import AgeRating from './AgeRating'
 import MemberList from './MemberList'
 import GroupMemberList from './GroupMemberList'
 import Member from './Member'
@@ -51,7 +49,6 @@ const Components = {
   'personality': Personality,
   'studio': Studio,
   'genre' : Genre,
-  'country' : Country,
   'newsitem': NewsItem,
   'frontpageslideshow':FrontpageSlideshow,
   'intro':Intro,
@@ -65,7 +62,6 @@ const Components = {
   'twocol':TwoCol,
   'title':Title,
   'topmovies':TopMovies,
-  'agerating': AgeRating,
   'historyitem': History,
   'albumlist': AlbumList,
   'groupalbumlist': GroupAlbumList,
