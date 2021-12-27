@@ -32,6 +32,7 @@ import GroupHistoryList from './GroupHistoryList'
 import History from './History'
 import AlbumList from './AlbumList'
 import GroupAlbumList from './GroupAlbumList'
+import Album from './Album'
 
 const Components = {
   'teaser': Teaser,
@@ -67,7 +68,8 @@ const Components = {
   'agerating': AgeRating,
   'historyitem': History,
   'albumlist': AlbumList,
-  'groupalbumlist': GroupAlbumList
+  'groupalbumlist': GroupAlbumList,
+  'album': Album
 }
 
 
