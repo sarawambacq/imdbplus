@@ -3,10 +3,9 @@ import SbEditable from "storyblok-react"
 import { render } from "storyblok-rich-text-react-renderer"
 import styles from "../styles/GroupList.module.scss"
 import { getAllItems } from "../utils/storyblok"
-import SmallCardList from "./SmallCardList"
+import AlbumCardList from "./AlbumCardList"
 
 const GroupMemberList = ({ data, level, locale }) => {
-  console.log("test");
   if (level === 'data') {
     var content = data.story.content;
   } else {
@@ -15,16 +14,16 @@ const GroupMemberList = ({ data, level, locale }) => {
   const [sortby, setSortby] = useState();
 
   const [items, setItems] = useState([]);
-  getAllItems('member', locale, sortby).then(
+  getAllItems('album', locale, sortby).then(
     function (result) {
-      setItems(result.data.stories.filter(item => item.full_slug.includes(data.story.name)));
+      setItems(result.data.stories.filter(item => item.full_slug.includes(content.name)));
     }
   );
 
   return (
     <div className={styles.list}>
       <div>
-        {items && items.length > 0 && <SmallCardList items={items} type="member"></SmallCardList>}
+        {items && items.length > 0 && <AlbumCardList items={items} type="album"></AlbumCardList>}
       </div>
     </div>
   );

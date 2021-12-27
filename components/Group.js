@@ -77,6 +77,10 @@ const Group = ({ data, level }) => {
             <div className={styles.navlink}>
               <a href={`${defaultLocale}members/${content.title.replace(' ', '-').toLowerCase()}`} className={styles.navigationlink}>{members[locale]}</a>
             </div>
+
+            <div className={styles.navlink}>
+              <a href={`${defaultLocale}albums/${content.title.replace(' ', '-').toLowerCase()}`} className={styles.navigationlink}>Albums</a>
+            </div>
           </div>
 
         </div>

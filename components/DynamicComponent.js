@@ -30,6 +30,8 @@ import GroupMemberList from './GroupMemberList'
 import Member from './Member'
 import GroupHistoryList from './GroupHistoryList'
 import History from './History'
+import AlbumList from './AlbumList'
+import GroupAlbumList from './GroupAlbumList'
 
 const Components = {
   'teaser': Teaser,
@@ -63,7 +65,9 @@ const Components = {
   'title':Title,
   'topmovies':TopMovies,
   'agerating': AgeRating,
-  'historyitem': History
+  'historyitem': History,
+  'albumlist': AlbumList,
+  'groupalbumlist': GroupAlbumList
 }
 
 

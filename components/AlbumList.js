@@ -5,29 +5,31 @@ import styles from "../styles/GroupList.module.scss"
 import { getAllItems } from "../utils/storyblok"
 import SmallCardList from "./SmallCardList"
 
-const GroupMemberList = ({ data, level, locale }) => {
-  console.log("test");
+const AlbumList = ({ data, level, locale }) => {
   if (level === 'data') {
     var content = data.story.content;
   } else {
     var content = data;
   }
   const [sortby, setSortby] = useState();
+  
+  const defaultLocale = locale === 'default' ? '' : `${locale}/`
 
   const [items, setItems] = useState([]);
-  getAllItems('member', locale, sortby).then(
+  getAllItems('group', locale, sortby).then(
     function (result) {
-      setItems(result.data.stories.filter(item => item.full_slug.includes(data.story.name)));
+      setItems(result.data.stories.map(item => ({...item, full_slug: `${defaultLocale}albums/${item.content.title.replace(' ', '-').toLowerCase()}`})));
     }
   );
 
   return (
     <div className={styles.list}>
       <div>
-        {items && items.length > 0 && <SmallCardList items={items} type="member"></SmallCardList>}
+        {items && items.length > 0 && <SmallCardList items={items} type="group"></SmallCardList>}
       </div>
     </div>
+
   );
 };
 
-export default GroupMemberList;
+export default AlbumList;

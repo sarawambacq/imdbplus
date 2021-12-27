@@ -49,6 +49,9 @@ const Navigation = ({ locale, locales }) => {
             <div className={styles.navlink}>
               <a href={`${defaultLocale}pages/history`} className={styles.navigationlink}>{history[locale]}</a>
             </div>
+            <div className={styles.navlink}>
+              <a href={`${defaultLocale}pages/albums`} className={styles.navigationlink}>{albums[locale]}</a>
+            </div>
           </div>
           <div className={styles.navlocales}>
             {

@@ -44,10 +44,10 @@ const Layout = ({ children, locale, locales, data }) => {
 
   return (
     <div className={styles.layout}>
-      <Head title={title} description={description} ogtitle={title} ogdescription={description} ogimage={image} ogurl={url} ogsite_name={sitename}  className={styles.head} />
-      <Navigation locale={locale} locales={locales} />
-      <NavigationMobile locale={locale} locales={locales} />
-      {children}
+      <Head title={title} description={description} ogtitle={title} ogdescription={description} ogimage={image} ogurl={url} ogsite_name={sitename}/>
+      <div className={styles.head}><Navigation locale={locale} locales={locales}/></div>
+      <div className={styles.head}><NavigationMobile locale={locale} locales={locales}/></div>
+      <div className={styles.children}>{children}</div>
       <Footer />
     </div>
   )
