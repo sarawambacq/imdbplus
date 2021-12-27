@@ -11,7 +11,7 @@ const Storyblok = new StoryblokClient({
 
 export async function getAllItems(components, locale, sort_by) {
   
-  let sbParams = { version: "draft", filter_query: { component: { in: components } }, sort_by: "first_published_at:desc" }
+  let sbParams = { per_page: 100, version: "draft", filter_query: { component: { in: components } }, sort_by: "first_published_at:desc" }
   if (sort_by) {
     sbParams.sort_by = sort_by;
   }

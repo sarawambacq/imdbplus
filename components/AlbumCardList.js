@@ -29,7 +29,7 @@ const AlbumCardList = ({ items, title, type }) => {
       {items.map((item) => {
         const lang = item.lang === "default" ? "/en" : `/${item.lang}`;
         return (
-          <div className={styles.smallcardwrapper}>
+          <div key={item.content.title} className={styles.smallcardwrapper}>
             {type == "product" && <AlbumCard lang={lang} title={item.content.title} picture={item.content.mainpicture.filename} spotify={item.content.spotify.url} short={item.content.short} type={type}/>}
             {type != "product" && <AlbumCard lang={lang} title={item.content.title} picture={item.content.mainpicture.filename} spotify={item.content.spotify.url} short={item.content.short} type={type} />}
           </div>
