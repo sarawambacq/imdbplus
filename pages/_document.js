@@ -28,7 +28,7 @@ export default class MyDocument extends Document {
           /> }
 
           {<script dangerouslySetInnerHTML={
-            __html: `var Tawk_API=Tawk_API||{ }, Tawk_LoadStart=new Date();
+            __html `var Tawk_API=Tawk_API||{ }, Tawk_LoadStart=new Date();
             (function(){
             var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
             s1.async=true;
